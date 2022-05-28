@@ -15,5 +15,6 @@ The Web stack used:
  - Back-End: Spring boot
  - Database:  MySQL
 
+(DISCLAIMER: THIS IS A THEORETICAL APPLICATION, NO REAL MONEY OR REAL INVESTING IS INVOLVED)
 
 Video Representation: https://youtu.be/H3exOj5Cai0
