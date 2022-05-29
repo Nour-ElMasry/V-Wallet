@@ -17,4 +17,7 @@ The Web stack used:
 
 (DISCLAIMER: THIS IS A THEORETICAL APPLICATION, NO REAL MONEY OR REAL INVESTING IS INVOLVED)
 
+API's used: 
+ - CoinGecko: For getting the latest value for each of the crypto currencies available on this application
+
 Video Representation: https://youtu.be/H3exOj5Cai0
