@@ -20,4 +20,4 @@ The Web stack used:
 API's used: 
  - CoinGecko: For getting the latest value for each of the crypto currencies available on this application
 
-Video Representation: https://youtu.be/H3exOj5Cai0
+Video Representation: https://youtu.be/-8DXPwp3KIc
