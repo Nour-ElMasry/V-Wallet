@@ -57,7 +57,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void editCreditCard(long id, long ccId,CreditCard cc) {
+    public void editCreditCard(long id, long ccId, CreditCard cc) {
         userRepository.editCreditCard(id, ccId, cc.getIban(), cc.getExpiration(), cc.getDeposit());
     }
 
@@ -79,9 +79,9 @@ public class UserServiceImpl implements UserService {
 
         if(totalDeposit >= investment){
             for (CreditCard c: creditCards) {
-                double deposit = Double.parseDouble(c.getDeposit());
-
                 if(investment == 0) break;
+
+                double deposit = Double.parseDouble(c.getDeposit());
 
                 if(investment > deposit){
                     investment -= deposit;

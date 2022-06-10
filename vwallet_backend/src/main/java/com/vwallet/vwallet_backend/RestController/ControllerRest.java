@@ -48,9 +48,20 @@ public class ControllerRest {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void editCreditCard(@PathVariable("id") Long id, @PathVariable("ccId") Long ccId, @PathVariable("sendingId") Long sendingId,@RequestBody CreditCard cc){
         CreditCard ccSending = userService.findById(id).getCreditCardById(sendingId);
-        ccSending.setDeposit(String.valueOf(Double.parseDouble(ccSending.getDeposit()) - Double.parseDouble(cc.getDeposit())));
-        cc.setDeposit(String.valueOf(Double.parseDouble(cc.getDeposit()) + Double.parseDouble(userService.findById(id).getCreditCardById(ccId).getDeposit())));
-        userService.editCreditCard(id, ccId, cc);
+        CreditCard ccReceiving = userService.findById(id).getCreditCardById(ccId);
+        ccSending.setDeposit(
+                String.valueOf(
+                        Double.parseDouble(ccSending.getDeposit()) - Double.parseDouble(cc.getDeposit())
+                )
+        );
+
+        ccReceiving.setDeposit(
+                String.valueOf(
+                        Double.parseDouble(cc.getDeposit()) + Double.parseDouble(userService.findById(id).getCreditCardById(ccId).getDeposit())
+                )
+        );
+
+        userService.editCreditCard(id, ccId, ccReceiving);
         userService.editCreditCard(id, sendingId, ccSending);
     }
 
